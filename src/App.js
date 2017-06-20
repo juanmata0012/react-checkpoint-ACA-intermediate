@@ -11,7 +11,7 @@ class App extends Component {
       apiTitle: "",
       apiExlplanation: "",
     }
-    this.state = {value: 'coconut'};
+    this.state = {value: 'Pretty Good'};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
