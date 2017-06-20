@@ -10,6 +10,7 @@ class App extends Component {
       apiPicture: "",
       apiTitle: "",
       apiExlplanation: "",
+      apiResult: "",
     }
     this.state = {value: 'Pretty Good'};
 
@@ -40,9 +41,9 @@ class App extends Component {
       });
 
     axios.post('https://posttestserver.com/post.php', 'Hello There')
-      .then((response) => {
-        console.log(response);
-        this.setState({apiResult: response.data})
+      .then((res) => {
+        console.log(res);
+        this.setState({apiResult: res.data})
       })
       .catch((error) => {
         console.log(error);
@@ -84,6 +85,12 @@ class App extends Component {
             </label>
             <input type="submit" value="Submit" />
           </form>
+        </div>
+
+        <div>
+          <p className="App-intro">
+            {this.state.apiResult}
+          </p>
         </div>
 
       </div>
